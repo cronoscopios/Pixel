@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<meta charset="utf-8">
+		<title>Pixel.pe</title>
+		<link rel="icon" href="images/favicon.ico"/>
+		<link rel="shortcut icon" href="images/favicon.ico" />
+		
+		<!--CSS-->
+		<link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Signika+Negative'>
+		<link rel="stylesheet" href="css/style.css">
+		<link rel="stylesheet" href="css/camera.css">
+		<link rel="stylesheet" href="css/form.css">
+
+		<!--JS-->
+		<script src="js/jquery.js"></script>
+		<script src="js/jquery-migrate-1.1.1.js"></script>
+		<script src="js/superfish.js"></script>
+		<script src="js/forms.js"></script>
+		<script src="js/jquery.ui.totop.js"></script>
+		<script src="js/jquery.equalheights.js"></script>
+		<script src="js/jquery.easing.1.3.js"></script>
+		<script src="js/jquery.ui.totop.js"></script>
+		<script src="js/tms-0.4.1.js"></script>
+
+
+
+		<!--Comienza Parallax-->
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
+		<script>
+			$(document).ready(function(){
+			    $('section[data-type="parallax_section"]').each(function(){
+			        var $bgobj = $(this); // Variable para asignacion de objeto
+			        $(window).scroll(function() {
+			        	$window = $(window);
+			            var yPos = -($window.scrollTop() / $bgobj.data('speed'));
+			            // cordinadas del background
+			            var coords = '50% '+ yPos + 'px';
+			            // moviendo el background
+			            $bgobj.css({ backgroundPosition: coords });
+			        });
+			    });
+			});
+		</script>
+		<!--End Parallax-->
+
+		<script>
+			$(document).ready(function(){
+				$('.slider_wrapper')._TMS({
+					show:0,
+					pauseOnHover:false,
+					prevBu:'.prev',
+					nextBu:'.next',
+					playBu:false,
+					duration:400,
+					preset:'fade',
+					pagination:true,//'.pagination',true,'<ul></ul>'
+					pagNums:false,
+					slideshow:2500,
+					numStatus:false,
+					banners: 'fade',
+					waitBannerAnimation:false,
+					progressBar:false
+				});
+			});
+			$(document).ready(function(){
+				!function(){
+			var map=[]
+			 ,names=[]
+			 ,win=$(window)
+			 ,header=$('header')
+			 ,currClass
+			$('.content').each(function(n){
+			 map[n]=this.offsetTop
+			 names[n]=$(this).attr('id')
+			})
+			win
+			 .on('scroll',function(){
+				var i=0
+				while(map[i++]<=win.scrollTop());
+				if(currClass!==names[i-2])
+				currClass=names[i-2]
+				header.removeAttr("class").addClass(names[i-2])
+			 })
+			}(); });
+					function goToByScroll(id){
+				$('html,body').animate({scrollTop: $("#"+id).offset().top},'slow');
+				}
+				$(document).ready(function(){
+					$().UItoTop({ easingType: 'easeOutQuart' });
+				});
+		</script>
+		<!--[if lt IE 8]>
+			<div style=' clear: both; text-align:center; position: relative;'>
+				<a href="http://windows.microsoft.com/en-US/internet-explorer/products/ie/home?ocid=ie6_countdown_bannercode">
+					<img src="http://storage.ie6countdown.com/assets/100/images/banners/warning_bar_0000_us.jpg" border="0" height="42" width="820" alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today." />
+				</a>
+			</div>
+		<![endif]-->
+		<!--[if lt IE 9]>
+			<script src="js/html5shiv.js"></script>
+			<link rel="stylesheet" media="screen" href="css/ie.css">
+		<![endif]-->
+	</head>
+	<body class="">
+<!--==============================header=================================-->
+		<header class="page1">
+			<div class="container_12">
+				<div class="grid_12">
+					<h1><a href="#" onClick="goToByScroll('page1'); return false;"><img src="images/logo.png" alt="pixel.pe"></a></h1><!--LOGO PERSONAL-->
+					<div class="menu_block">
+						<nav class="">
+							<ul class="sf-menu">
+								<li class="current men"><a onClick="goToByScroll('page1'); return false;" href="#">INICIO</a> <strong class="hover"></strong></li>
+								<li class="men1"><a onClick="goToByScroll('page2'); return false;" href="#">NOSOTROS</a><strong class="hover"></strong></li>
+								<li class=" men2"><a onClick="goToByScroll('page3'); return false;" href="#">SERVICIOS</a> <strong class="hover"></strong></li>
+								<!--<li class=" men3"><a onClick="goToByScroll('page4'); return false;" href="#">Clientes</a> <strong class="hover"></strong></li>-->
+								<li class=" men4"><a onClick="goToByScroll('page5'); return false;" href="#">CONTACTO</a> <strong class="hover"></strong></li>
+							</ul>
+						</nav>
+						<div class="clear"></div>
+					</div>
+				</div>
+				<div class="clear"></div>
+			</div>
+		</header>
+<!--=======content================================-->
+		<div id="page1" class="content" data-type="parallax_section" data-speed="10">
+			<div class="ic"></div>
+			<div class="container_12">
+				<div class="grid_12">
+					<div class="slider_wrapper">
+						<ul class="items">
+							<li>
+								<img src="images/spacer.gif" alt="">
+								<div class="caption banner">
+									<h2>DISEÑO y DESARROLLO WEB</h2>
+								</div>
+							</li>
+							<!--<li>
+								<img src="images/spacer.gif" alt="">
+								<div class="caption banner">
+									<h2>PIXEL.PE</h2>
+								</div>
+							</li>
+							<li>
+								<img src="images/spacer.gif" alt="">
+								<div class="caption banner">
+									<h2>HTML5-CSS3-JQUERY</h2>
+								</div>
+							</li>
+							<li>
+								<img src="images/spacer.gif" alt="">
+								<div class="caption banner">
+									<h2>PIXEL.PE</h2>
+								</div>
+							</li>-->
+						</ul>
+					</div>
+					<div class="socials">
+						<a href="https://www.facebook.com/pages/Pixelpe/193372387351001" target="_blank"></a>
+						<a href="https://twitter.com/cronoscopios" target="_blank"></a>
+						<a href="https://plus.google.com/u/0/+AdrianLinaresplus/posts" target="_blank"></a>
+						<a href="#"></a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="page2" class="content" data-type="parallax_section" data-speed="10">
+			<div class="container_12">
+				<div class="grid_12">
+					<div class="slogan">
+						<h3>PIXEL</h3>
+							<!--<a onClick="goToByScroll('page3'); return false;" href="#"><span></span></a>
+							<a onClick="goToByScroll('page4'); return false;" href="#"><em></em></a>-->
+						<div class="text1">
+							Somos un estudio especializado en diseño y desarrollo web. <br>
+							Planificamos, producimos, asesoramos y comunicamos. <br>
+							Pero lo más importante, conocemos el rumbo para cada proyecto.
+						</div>
+					</div>
+				</div>
+				<!-- <div class="grid_3">
+					<div class="box maxheight">
+						<img src="images/box_img1.jpg" alt="">
+						<div class="text1"><a href="#">Laura Stegner</a></div>senior manager
+						<div class="socials1">
+							<a href="#"></a>
+							<a href="#"></a>
+							<a href="#"></a>
+							<a href="#"></a>
+						</div>
+					</div>
+				</div>
+				<div class="grid_3">
+					<div class="box maxheight">
+						<img src="images/box_img2.jpg" alt="">
+						<div class="text1"><a href="#">Anton Stegner</a></div> manager
+						<div class="socials1">
+							<a href="#"></a>
+							<a href="#"></a>
+							<a href="#"></a>
+							<a href="#"></a>
+						</div>
+					</div>
+				</div>
+				<div class="grid_3">
+					<div class="box maxheight">
+						<img src="images/box_img3.jpg" alt="">
+						<div class="text1"><a href="#">Lisa Haddon </a></div>accounter
+						<div class="socials1">
+							<a href="#"></a>
+							<a href="#"></a>
+							<a href="#"></a>
+							<a href="#"></a>
+						</div>
+					</div>
+				</div>
+				<div class="grid_3">
+					<div class="box maxheight">
+						<img src="images/box_img4.jpg" alt="">
+						<div class="text1"><a href="#">Adrián Linares</a></div>Director
+						<div class="socials1">
+							<a href="#"></a>
+							<a href="#"></a>
+							<a href="#"></a>
+							<a href="#"></a>
+						</div>
+					</div>
+				</div>-->
+			</div>
+		</div>
+		<div id="page3" class="content" data-type="parallax_section" data-speed="10">
+			<div class="container_12">
+				<div class="grid_12">
+					<div class="slogan">
+						<h3>SERVICIOS</h3>
+						<div class="text1">
+							Nos concentramos en dos campos claves el DISEÑO y DESARROLLO.<br> 
+							Enfocamos nuestra experiencia y esfuerzos en cumplir un solo objetivo;<br>
+							satisfacer tus necesidades.
+
+						</div>
+					</div>
+				</div>
+				<div class="grid_3">
+					<div class="box maxheight1">
+						<img src="images/box1_img1.png" alt="">
+						<div class="text2">Diseño</div>
+						Escuchamos atentamente cuales son tus ideas, necesidades y visión global de tu sitio web. Siendo lo mas fiel posible a estos criterios.
+					</div>
+				</div>
+				<div class="grid_3">
+					<div class="box maxheight1">
+						<img src="images/box1_img2.png" alt="">
+						<div class="text2">Investigaciòn</div>
+						Analizamos a tu competencia y al mercado para  
+						Ite auctor non pellentesque vel, aliquet sit amet erat. 
+					</div>
+				</div>
+				<div class="grid_3">
+					<div class="box maxheight1">
+						<img src="images/box1_img3.png" alt="">
+						<div class="text2">Desarrollo</div>
+						Para esto seleccionamos y utilizamos aquellas tecnologias acorde con tu proyecto. 
+					</div>
+				</div>
+				<div class="grid_3">
+					<div class="box maxheight1">
+						<img src="images/box1_img4.png" alt="">
+						<div class="text2">Asesoramiento</div>
+						No tienes conocimientos? Nosotros tambien te ayudamos en esto y lo hacemos para que entiendas que ocurre detras de tu sitio web.
+					</div>
+				</div>
+			</div>
+		</div>
+		<!--<div id="page4" class="content" data-type="parallax_section" data-speed="10">
+			<div class="container_12">
+				<div class="grid_12">
+					<h3>Nuestros Clientes</h3>
+				</div>
+				<div class="companies">
+					<div class="grid_3">
+						<img src="images/logo1.jpg" alt="">
+						<div class="text1">Company Name</div>Aliquam nibh ante, egestas id dictum  wrecommodo luctus liberoaesent.
+						<br>
+						<a href="#">Visitar</a>
+					</div>
+					<div class="grid_3">
+						<img src="images/logo2.jpg" alt="">
+						<div class="text1">Company Name</div>Fusce adipiscing quam id risus gittis, non consequat lacus interdumoin.
+						<br>
+						<a href="#">Visitar</a>
+					</div>
+					<div class="grid_3">
+						<img src="images/logo3.jpg" alt="">
+						<div class="text1">Company Name</div>Quisque viverra nulla nunc, eu ultrices wertlibero ultricies.
+						<br>
+						<a href="#">Visitar</a>
+					</div>
+					<div class="grid_3">
+						<img src="images/logo4.jpg" alt="">
+						<div class="text1">Company Name</div>Courrewerwe abitur vel lorem sit amet ulla ullamcorper fermentumn vitae.
+						<br>
+						<a href="#">Visitar</a>
+					</div>
+					<div class="clear"></div>
+					<div class="grid_3">
+						<img src="images/logo5.jpg" alt="">
+						<div class="text1">Company Name</div>Oiliquam nibh ante, egestas id dictum  wrecommodo luctus liberoaesente.
+						<br>
+						<a href="#">Go to Site</a>
+					</div>
+					<div class="grid_3">
+						<img src="images/logo6.jpg" alt="">
+						<div class="text1">Company Name</div>Gusce adipiscing quam id risus gittis, non consequat lacus interdumoiju.
+						<br>
+						<a href="#">Go to Site</a>
+					</div>
+					<div class="grid_3">
+						<img src="images/logo7.jpg" alt="">
+						<div class="text1">Company Name</div>Niuisque viverra nulla nunc, eu ultrices wertlibero ultricies egetasellus ol.
+						<br>
+						<a href="#">Go to Site</a>
+					</div>
+					<div class="grid_3">
+						<img src="images/logo8.jpg" alt="">
+						<div class="text1">Company Name</div>Fouerourrewerwe abitur vel lorem sit amet ulla ullamcorper fermentum.
+						<br>
+						<a href="#">Go to Site</a>
+					</div>
+				</div>
+			</div>
+		</div>-->
+		<div id="page5" class="content" data-type="parallax_section" data-speed="10">
+			<div class="container_12">
+				<div class="grid_12">
+					<div class="slogan">
+						<h3>CONTACTO</h3>
+						<!--<div class="text1">
+							Gyrto ivamus at magna non nunc tristique rhoncusu. Lliquam nibh ante, egestas id dictum a, commodo luctus mibero. Praesent faucibus malesuada faucibu. Monec laoreet metus id laoreet malesuadw.
+						</div>-->
+					</div>
+				</div>
+				<div class="clear"></div>
+				<div class="map">
+					<div class="grid_3">
+						<div class="text1"></div>
+						<address>
+							<dl>
+								<!--<dt>&nbsp<br></dt>-->
+								<!--<dd><span>Freephone:</span>+1 800 559 6580</dd>-->
+								<dd>Teléfono: 9827-56281</dd>
+								<!--<dd><span>FAX:</span>+1 800 889 9898</dd>-->
+								<dd>E-mail: <a href="#" class="link-1">info@pixel.pe</a></dd>
+								<!--<dd>Skype: <a href="#" class="link-1">@pixel</a></dd>-->
+								<dd><span>Lima, Perú.</span></dd>
+							</dl>
+						</address>
+					</div>
+					<div class="grid_3">
+						<div class="text1">&nbsp;</div>
+						<!--<figure class="map">
+							<iframe width="300" height="230" frameborder="1" scrolling="no" marginheight="0" marginwidth="0" src="http://maps.google.com/maps/ms?ll=-11.987502,-76.797459&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=Chaclacayo,+Lima,+Perú&amp;aq=0&amp;spn=0.012111,0.01929&amp;ie=UTF8&amp;hq=&amp;z=14&amp;msa=0&amp;msid=210197644370942820886.0004eab1403be25a1d046&amp;iwloc=A&amp;output=embed">
+							</iframe>-->
+						</figure>
+					</div>
+					<div class="grid_5 prefix_1">
+						<div class="text1">Escríbenos</div>
+						<form id="form">
+							<div class="success_wrapper">
+							<div class="success">Formulario enviado!<br>
+							<strong>Nos pondremos en contacto a la brevedad.</strong></div></div>
+							<fieldset>
+							<label class="name">
+							<input type="text" value="Nombre:">
+							<br class="clear">
+							<span class="error error-empty">*Esto no es un nombre válido.</span><span class="empty error-empty">*Este campo es obligatorio.</span></label>
+							<label class="email">
+							<input type="text" value="E-mail:">
+							<br class="clear">
+							<span class="error error-empty">*Esto no es una dirección de email válida.</span><span class="empty error-empty">*Este campo es obligatorio.</span></label>
+							<label class="message">
+							<textarea>Mensaje:</textarea>
+							<br class="clear">
+							<span class="error">*El mensaje es demasiado corto.</span><span class="empty">*Este campo es obligatorio</span></label>
+							<div class="clear"></div>
+							<div class="btns"><a data-type="submit" class="link1">Enviar</a>
+							<div class="clear"></div>
+							</div></fieldset>
+						</form>
+					</div>
+					<div class="clear"></div>
+				</div>
+			</div>
+		</div>
+<!--==============================footer=================================-->
+		<footer>
+			<div class="container_12">
+				<div class="grid_12">
+					<div class="copy">
+						<a rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/"><img alt="Licencia Creative Commons" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-nd/4.0/88x31.png" /></a><br />Este obra está bajo una <a rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank">Licencia Creative Commons Atribución-NoComercial-SinObraDerivada 4.0 Internacional</a>.
+					</div>
+				</div>
+				<div class="clear"></div>
+			</div>
+		</footer>
+	</body>
+</html>
